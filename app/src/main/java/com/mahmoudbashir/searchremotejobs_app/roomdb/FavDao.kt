@@ -10,7 +10,7 @@ interface FavDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addFavouriteJob(job:FavouriteJob)
     @Query("SELECT * FROM fav_job ORDER BY id DESC")
-    fun getAllFav():LiveData<FavouriteJob>
+    fun getAllFav():LiveData<List<FavouriteJob>>
     @Delete
     suspend fun deleteFaveJob(job: FavouriteJob)
 

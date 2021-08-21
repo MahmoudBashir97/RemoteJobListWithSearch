@@ -4,9 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.mahmoudbashir.searchremotejobs_app.models.FavouriteJob
 
 @Database(entities = [FavouriteJob::class],version = 1)
+@TypeConverters(Converters::class)
 abstract class favJobDatabase :RoomDatabase(){
 
     abstract fun getDao():FavDao

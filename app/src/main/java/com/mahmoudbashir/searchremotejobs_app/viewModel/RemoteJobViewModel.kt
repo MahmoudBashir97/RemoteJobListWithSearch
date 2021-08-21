@@ -24,4 +24,8 @@ class RemoteJobViewModel(
     }
 
     fun getAllFavJobs() =remoteRepository.getAllFavJobs()
+
+    fun searcResultQurey(query:String)=remoteRepository.getSearchResult(query)
+
+    fun searchResultLiveData() = remoteRepository.returnResultSearch()
 }
